@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+           
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title"><span style="color:white;">Resume</span> Builder</h1>
+        
+        <div class="details">
+            <div class="personal">
+            <label for="name"><i class="fa-solid fa-user"></i>First Name:</label>
+            <input type="text" id="name" name=" name" placeholder="Enter First Name">
+
+            <label for="name1"><i class="fa-solid fa-user"></i>Last Name:</label>
+            <input type="text" id="name1" name=" name1" placeholder="Enter Last Name">
+
+            <label for="contact"><i class="fa-solid fa-phone"></i>Contact Number:</label>
+            <input type="text" id="contact" name="number"  placeholder="Enter Number" >
+
+            <label for="Address"><i class="fa-solid fa-address-book"></i>Address:</label>
+            <textarea  id="Address" name="Add"  placeholder="Enter Address"></textarea> 
+
+            <label for="email"><i class="fa-solid fa-envelope"></i>email:</label>
+            <input type="email" id="email" name="email"  placeholder="Enter email" >
+
+            <label for="photo"><i class="fa-solid fa-image"></i>Photo:</label>
+            <input class="photo" type="file" id="photo" name="photo"  placeholder="upload photo" >
+
+            <label for="country"><i class="fa-solid fa-globe"></i>Country:</label>
+            <input type="text" id="country" name="country"  placeholder="Enter country" >
+            </div>
+
+            <div class="professional">
+            <label for="education"><i class="fa-solid fa-school"></i>Education:</label>
+            <textarea id="education" name="education" placeholder="Enter education"></textarea>
+
+            <label for="hobbies"><i class="fa-solid fa-gear"></i>Hobbies:</label>
+            <input type="text" id="hobbies" name="hobbies" placeholder="Enter hobbies" >
+
+            <label for="skills"><i class="fa-solid fa-lightbulb"></i>Skills:</label>
+            <input type="text" id="skills" name="skills"  placeholder="Enter Skills" >
+
+            <label for="workExpirence"><i class="fa-solid fa-briefcase"></i>Work Expirence:</label>
+            <textarea  id="workExpirence" name="workExpirence"  placeholder="Expirence" ></textarea>
+
+            <label for="linkedin"><i class="fa-brands fa-linkedin"></i>LinkedIn Id:</label>
+            <input type="text" id="linkedin" name="linkedin"  placeholder="Enter Id" >
+
+            <label for="refrence"><i class="fa-solid fa-asterisk"></i>Refrence:</label>
+            <input type="text" id="refrence" name="refrence"  placeholder="Link for refrence" >
+            </div>
+
+        </div>
+        <input type="submit" id="submit" onclick="return validateForm() && update()" name="Generate"  placeholder="Generate" >
+       
+    </div>
+    <div class="resume">
+        <div class="personalT">
+            <img id="photoT" class="profile" src="profilePic.png" alt="image">
+            <div class="personalInfo">
+                <div class="nameT" >
+            <h4 id="Title" style="display:inline-block; margin-right:3px;">Lucky</h4>
+            <h4 id="Title4"  style="display:inline-block; ">Meena</h4>
+        </div>
+            <p id="contactT">1234567890,1234567890</p>
+            <p id="AddressT">Flat no.301,Balaji palace,85 plot area,narendra nagar ext. , Nagpur,440027</p>
+            <p id="emailT">luckymeena@gmail.com</p>
+            <a href="" id="linkedinT">Linkedin</a>
+            </div>
+        </div>
+        <div class="proffesionalT">
+            <h2 id="Title1" class="Head">Lucky</h2>
+            <h5 id="Title2">Meena</h5>
+            
+            <hr>
+            <h3>Education:</h3>
+            <p id="educationT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting,
+                 remaining essentially unchanged. </p>
+            <hr>
+            <h3>Skills:</h3>
+            <p id="skillsT">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h3>Hobbies:</h3>
+            <p id="hobbiesT">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <hr>
+            <h3>Work Expirence:</h3>
+            <p id="workExpirenceT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting,
+                 remaining essentially unchanged.</p>
+
+            <hr>
+            <h3>Refrence:</h3>
+            <a href="" id="refrenceT">Lorem Ipsum is simply dummy text of the printing and typesetting industry</a>
+        </div>
+        
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
